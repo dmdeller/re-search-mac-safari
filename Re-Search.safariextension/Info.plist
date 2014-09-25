@@ -17,7 +17,63 @@
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>Chrome</key>
-	<dict/>
+	<dict>
+		<key>Global Page</key>
+		<string>main.html</string>
+		<key>Menus</key>
+		<array>
+			<dict>
+				<key>Identifier</key>
+				<string>engine</string>
+				<key>Menu Items</key>
+				<array>
+					<dict>
+						<key>Command</key>
+						<string>go_engine</string>
+						<key>Identifier</key>
+						<string>google</string>
+						<key>Title</key>
+						<string>Google</string>
+					</dict>
+					<dict>
+						<key>Command</key>
+						<string>go_engine</string>
+						<key>Identifier</key>
+						<string>yahoo</string>
+						<key>Title</key>
+						<string>Yahoo</string>
+					</dict>
+				</array>
+			</dict>
+		</array>
+		<key>Toolbar Items</key>
+		<array>
+			<dict>
+				<key>Command</key>
+				<string>go_favourite</string>
+				<key>Identifier</key>
+				<string>favourite</string>
+				<key>Image</key>
+				<string>images/toolbar-icon.png</string>
+				<key>Label</key>
+				<string>Re-Search: Favourite</string>
+				<key>Menu</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>Identifier</key>
+				<string>choose</string>
+				<key>Image</key>
+				<string>images/toolbar-icon.png</string>
+				<key>Include By Default</key>
+				<false/>
+				<key>Label</key>
+				<string>Re-Search: Choose</string>
+				<key>Menu</key>
+				<string>engine</string>
+			</dict>
+		</array>
+	</dict>
 	<key>Content</key>
 	<dict>
 		<key>Scripts</key>
@@ -32,7 +88,12 @@
 	<key>Permissions</key>
 	<dict>
 		<key>Website Access</key>
-		<dict/>
+		<dict>
+			<key>Include Secure Pages</key>
+			<true/>
+			<key>Level</key>
+			<string>All</string>
+		</dict>
 	</dict>
 	<key>Website</key>
 	<string>http://horizon-nigh.org</string>
