@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Author</key>
+	<string>D.M.Deller</string>
+	<key>Builder Version</key>
+	<string>9537.85.10.17.1</string>
+	<key>CFBundleDisplayName</key>
+	<string>Re-Search</string>
+	<key>CFBundleIdentifier</key>
+	<string>org.horizon-nigh.re-search.safari</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>Chrome</key>
+	<dict/>
+	<key>Content</key>
+	<dict>
+		<key>Scripts</key>
+		<dict/>
+	</dict>
+	<key>Description</key>
+	<string>Repeat your search with a different search engine</string>
+	<key>DeveloperIdentifier</key>
+	<string>2ZS98V3L3J</string>
+	<key>ExtensionInfoDictionaryVersion</key>
+	<string>1.0</string>
+	<key>Permissions</key>
+	<dict>
+		<key>Website Access</key>
+		<dict/>
+	</dict>
+	<key>Website</key>
+	<string>http://horizon-nigh.org</string>
+</dict>
+</plist>
