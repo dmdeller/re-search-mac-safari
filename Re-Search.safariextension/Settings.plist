@@ -28,7 +28,7 @@
 		<key>DefaultValue</key>
 		<string>6F87078F-1B51-4038-9305-4D8674713A5F</string>
 		<key>Key</key>
-		<string>search-engine</string>
+		<string>favouriteEngine</string>
 		<key>Title</key>
 		<string>Search Engine</string>
 		<key>Titles</key>
@@ -51,6 +51,10 @@
 			<string>44FA1270-D84E-4140-A46C-BAFD61E4792D</string>
 			<string>C86BB4AB-5A33-482F-8F0E-88DC00A4E8C5</string>
 		</array>
+	</dict>
+	<dict>
+		<key>Type</key>
+		<string>Separator</string>
 	</dict>
 </array>
 </plist>

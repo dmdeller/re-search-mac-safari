@@ -29,17 +29,17 @@
 				<array>
 					<dict>
 						<key>Command</key>
-						<string>go_engine</string>
+						<string>goEngine</string>
 						<key>Identifier</key>
-						<string>google</string>
+						<string>7A8141DE-CC69-46F0-B913-2719102ED88B</string>
 						<key>Title</key>
 						<string>Google</string>
 					</dict>
 					<dict>
 						<key>Command</key>
-						<string>go_engine</string>
+						<string>goEngine</string>
 						<key>Identifier</key>
-						<string>yahoo</string>
+						<string>B27CE644-9CF6-49F8-BC0F-8C82B8479496</string>
 						<key>Title</key>
 						<string>Yahoo</string>
 					</dict>
@@ -50,7 +50,7 @@
 		<array>
 			<dict>
 				<key>Command</key>
-				<string>go_favourite</string>
+				<string>goFavourite</string>
 				<key>Identifier</key>
 				<string>favourite</string>
 				<key>Image</key>
@@ -61,6 +61,8 @@
 				<string></string>
 			</dict>
 			<dict>
+				<key>Command</key>
+				<string>goEngine</string>
 				<key>Identifier</key>
 				<string>choose</string>
 				<key>Image</key>

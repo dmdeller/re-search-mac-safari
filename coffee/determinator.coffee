@@ -2,8 +2,16 @@ this.ReSearch.Determinator =
   goFavourite: (tab) ->
     console.log "hi, #{tab.url}"
     
-    this.redirectURL(tab.url)
+    redirectURL = this.redirectURL(tab.url)
+    if redirectURL?
+      tab.url = redirectURL
+    else
+      alert 'Sorry, this page is not supported by Re-Search.'
   
+  isSearchPage: (currentURL) ->
+    this.redirectURL(currentURL)?
+  
+  # Given a current search URL, find and return an equivalent search URL with a different search engine
   redirectURL: (currentURL) ->
     engines = ReSearch.Config.engines()
     
@@ -22,22 +30,17 @@ this.ReSearch.Determinator =
       pageQuery = this.queryString(engine.queryPart, currentURLPathPart)
       continue unless pageQuery? and pageQuery.length > 0
       
-      alert("your query was: #{pageQuery}")
-      return
-      
-      #redirectEngine = [self redirectEngineForID:[self.sharedDefaults objectForKey:kDefaultsFavouriteEngineID] inEngines:engines currentEngineID:engineData[kEngineID]];
-      redirectEngine = engine
-      
+      redirectEngine = this.redirectEngine(engine.id)
       continue unless redirectEngine?
       
-      #NSURL *redirectURL = [self redirectURLForEngineRedirectURL:redirectEngineData[kEngineRedirectURL] query:pageQuery];
-      redirectURL = null
-      
+      redirectURL = this.engineQueryURL(redirectEngine.redirectURL, pageQuery)
       continue unless redirectURL?
+      
       return redirectURL
     
-    alert 'Sorry, this page is not supported by Re-Search.'
-
+    return null
+  
+  # Given a pattern and a relative URL, figure out and return the plain text search terms
   queryString: (engineQueryPart, pagePathPart) ->
     unless _.str.include(engineQueryPart, ReSearch.queryToken)
       console.log "queryPart doesn't contain token: #{engineQueryPart}"
@@ -76,3 +79,32 @@ this.ReSearch.Determinator =
     decodedQuery = decodeURIComponent(decodedQuery)
     
     return decodedQuery
+  
+  # Given a current search engine ID, determine which search engine to redirect to
+  redirectEngine: (currentID) ->
+    favouriteID = ReSearch.Config.Engine.ID.favourite()
+    
+    if currentID == favouriteID
+      if currentID == ReSearch.Config.Engine.ID.DuckDuckGo
+          console.log "Current search page and favourite are both DuckDuckGo; redirecting to Google instead"
+          
+          return ReSearch.Config.Engine.Google()
+      else
+          console.log "Current search page and favourite are the same; redirecting to DuckDuckGo instead"
+          
+          return ReSearch.Config.Engine.DuckDuckGo()
+    else
+      return ReSearch.Config.Engine.favourite()
+
+  # Given a search engine redirect URL pattern and a query, return a URL to redirect to
+  engineQueryURL: (engineRedirectURL, query) ->
+    encodedQuery = encodeURIComponent(query)
+    #encodedQuery.replace(/%20/g, '+')
+    
+    unless _.str.include(engineRedirectURL, ReSearch.queryToken)
+        console.log "redirectURL does not contain token: #{engineRedirectURL}"
+        return null
+    
+    url = engineRedirectURL.replace(ReSearch.queryToken, encodedQuery)
+    
+    return url
