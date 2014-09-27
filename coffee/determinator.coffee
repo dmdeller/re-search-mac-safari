@@ -43,6 +43,18 @@ this.ReSearch.Determinator =
       console.log "queryPart doesn't contain token: #{engineQueryPart}"
       return
     
+    engineQueryPartParts = engineQueryPart.split(ReSearch.queryToken)
+    engineQueryFirstPart = _.first(engineQueryPartParts)
+    engineQueryLastPart = _.last(engineQueryPartParts);
+    
+    unless _.str.include(pagePathPart, engineQueryFirstPart)
+      console.log "domain matched, but current URL: #{pagePathPart} doesn't contain first part of queryPart: #{engineQueryFirstPart}"
+      return
+        
+    if engineQueryLastPart.length > 0 and !_.str.include(pagePathPar, engineQueryLastPart)
+      console.log "domain matched, but current URL: #{pagePathPart} doesn't contain last part of queryPart: #{engineQueryLastPart}"
+      return
+    
     regex = engineQueryPart.replace(ReSearch.queryToken, "(.+?)") + "/i"
     matches = pagePathPart.match(regex)
     
@@ -54,3 +66,4 @@ this.ReSearch.Determinator =
     decodedQuery = decodeURIComponent(encodedQuery)
     
     return decodedQuery
+
