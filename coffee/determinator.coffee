@@ -11,6 +11,14 @@ this.ReSearch.Determinator =
   isSearchPage: (currentURL) ->
     this.redirectURL(currentURL)?
   
+  isFavouriteEngine: (currentURL) ->
+    favouriteEngine = ReSearch.Config.Engine.favourite()
+    
+    urlComponents = purl(currentURL)
+    currentURLHostPart = urlComponents.attr('host')
+    
+    return _.endsWith(currentURLHostPart, favouriteEngine.domainPart)
+  
   # Given a current search URL, find and return an equivalent search URL with a different search engine
   redirectURL: (currentURL) ->
     engines = ReSearch.Config.engines()
@@ -20,7 +28,7 @@ this.ReSearch.Determinator =
       return
     
     urlComponents = purl(currentURL)
-    currentURLHostPart = urlComponents.attr('host');
+    currentURLHostPart = urlComponents.attr('host')
     currentURLPathPart = urlComponents.attr('relative')
     
     for engine in engines
