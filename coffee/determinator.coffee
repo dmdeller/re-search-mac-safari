@@ -1,7 +1,7 @@
 this.ReSearch.Determinator =
   goFavourite: (tab) ->
     if this.isFavouriteEngine(tab.url)
-      alert 'You are already looking at your favourite search engine.'
+      alert 'You are already looking at your chosen search engine.'
       return
     
     redirectURL = this.redirectURL(tab.url)
