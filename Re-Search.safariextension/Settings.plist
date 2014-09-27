@@ -17,6 +17,11 @@
 			<string>DuckDuckGo</string>
 			<string>Start Page</string>
 			<string>Disconnect</string>
+			<string>Custom 1</string>
+			<string>Custom 2</string>
+			<string>Custom 3</string>
+			<string>Custom 4</string>
+			<string>Custom 5</string>
 		</array>
 		<key>Type</key>
 		<string>PopUpButton</string>
@@ -28,6 +33,11 @@
 			<string>11A7CF8D-9908-4D9E-B38C-68DD7E118958</string>
 			<string>44FA1270-D84E-4140-A46C-BAFD61E4792D</string>
 			<string>C86BB4AB-5A33-482F-8F0E-88DC00A4E8C5</string>
+			<string>customEngine1</string>
+			<string>customEngine2</string>
+			<string>customEngine3</string>
+			<string>customEngine4</string>
+			<string>customEngine5</string>
 		</array>
 	</dict>
 	<dict>

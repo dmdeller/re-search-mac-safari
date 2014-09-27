@@ -20,7 +20,11 @@ this.ReSearch.Determinator =
       alert 'Sorry, this page is not supported by Re-Search.'
   
   isSearchPage: (currentURL) ->
-    this.redirectURL(currentURL)?
+    # Pretend we want to use DuckDuckGo, so that this method won't fail if the favourite search engine is invalid
+    result = this.redirectURL(currentURL, ReSearch.Config.Engine.DuckDuckGo())?
+    unless result then console.log "Not a search page: #{currentURL}" if ReSearch.debug
+    
+    return result
   
   isPageBelongingToEngine: (currentURL, engine) ->
     urlComponents = purl(currentURL)

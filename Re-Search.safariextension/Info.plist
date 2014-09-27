@@ -75,6 +75,46 @@
 						<key>Title</key>
 						<string>Disconnect</string>
 					</dict>
+					<dict>
+						<key>Command</key>
+						<string>goEngine</string>
+						<key>Identifier</key>
+						<string>customEngine1</string>
+						<key>Title</key>
+						<string>Custom 1</string>
+					</dict>
+					<dict>
+						<key>Command</key>
+						<string>goEngine</string>
+						<key>Identifier</key>
+						<string>customEngine2</string>
+						<key>Title</key>
+						<string>Custom 2</string>
+					</dict>
+					<dict>
+						<key>Command</key>
+						<string>goEngine</string>
+						<key>Identifier</key>
+						<string>customEngine3</string>
+						<key>Title</key>
+						<string>Custom 3</string>
+					</dict>
+					<dict>
+						<key>Command</key>
+						<string>goEngine</string>
+						<key>Identifier</key>
+						<string>customEngine4</string>
+						<key>Title</key>
+						<string>Custom 4</string>
+					</dict>
+					<dict>
+						<key>Command</key>
+						<string>goEngine</string>
+						<key>Identifier</key>
+						<string>customEngine5</string>
+						<key>Title</key>
+						<string>Custom 5</string>
+					</dict>
 				</array>
 			</dict>
 		</array>
