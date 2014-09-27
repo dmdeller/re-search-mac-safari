@@ -4,7 +4,29 @@
 <array>
 	<dict>
 		<key>DefaultValue</key>
-		<string>bing</string>
+		<string>none</string>
+		<key>Key</key>
+		<string>shortcut</string>
+		<key>Title</key>
+		<string>Keyboard Shortcut</string>
+		<key>Titles</key>
+		<array>
+			<string>None</string>
+			<string>Option-R</string>
+			<string>Shift-Option-R</string>
+		</array>
+		<key>Type</key>
+		<string>PopUpButton</string>
+		<key>Values</key>
+		<array>
+			<string>none</string>
+			<string>opt-r</string>
+			<string>shift-opt-r</string>
+		</array>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<string>6F87078F-1B51-4038-9305-4D8674713A5F</string>
 		<key>Key</key>
 		<string>search-engine</string>
 		<key>Title</key>
@@ -22,12 +44,12 @@
 		<string>PopUpButton</string>
 		<key>Values</key>
 		<array>
-			<string>google</string>
-			<string>yahoo</string>
-			<string>bing</string>
-			<string>ddg</string>
-			<string>startpage</string>
-			<string>disconnect</string>
+			<string>7A8141DE-CC69-46F0-B913-2719102ED88B</string>
+			<string>B27CE644-9CF6-49F8-BC0F-8C82B8479496</string>
+			<string>6F87078F-1B51-4038-9305-4D8674713A5F</string>
+			<string>11A7CF8D-9908-4D9E-B38C-68DD7E118958</string>
+			<string>44FA1270-D84E-4140-A46C-BAFD61E4792D</string>
+			<string>C86BB4AB-5A33-482F-8F0E-88DC00A4E8C5</string>
 		</array>
 	</dict>
 </array>
