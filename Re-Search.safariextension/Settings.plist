@@ -30,7 +30,7 @@
 		<key>Key</key>
 		<string>favouriteEngine</string>
 		<key>Title</key>
-		<string>Search Engine</string>
+		<string>Favourite Search Engine</string>
 		<key>Titles</key>
 		<array>
 			<string>Google</string>
@@ -55,6 +55,186 @@
 	<dict>
 		<key>Type</key>
 		<string>Separator</string>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>Custom Search Engine 1</string>
+		<key>Type</key>
+		<string>Group</string>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<string>example.com</string>
+		<key>Key</key>
+		<string>customEngine1DomainPart</string>
+		<key>Title</key>
+		<string>Domain Name</string>
+		<key>Type</key>
+		<string>TextField</string>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<string>q=*</string>
+		<key>Key</key>
+		<string>customEngine1QueryPart</string>
+		<key>Title</key>
+		<string>Query Fragment</string>
+		<key>Type</key>
+		<string>TextField</string>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<string>http://example.com/search?q=*</string>
+		<key>Key</key>
+		<string>customEngine1RedirectURL</string>
+		<key>Title</key>
+		<string>Redirect URL</string>
+		<key>Type</key>
+		<string>TextField</string>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>Custom Search Engine 2</string>
+		<key>Type</key>
+		<string>Group</string>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<string>example.com</string>
+		<key>Key</key>
+		<string>customEngine2DomainPart</string>
+		<key>Title</key>
+		<string>Domain Name</string>
+		<key>Type</key>
+		<string>TextField</string>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<string>q=*</string>
+		<key>Key</key>
+		<string>customEngine2QueryPart</string>
+		<key>Title</key>
+		<string>Query Fragment</string>
+		<key>Type</key>
+		<string>TextField</string>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<string>http://example.com/search?q=*</string>
+		<key>Key</key>
+		<string>customEngine2RedirectURL</string>
+		<key>Title</key>
+		<string>Redirect URL</string>
+		<key>Type</key>
+		<string>TextField</string>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>Custom Search Engine 3</string>
+		<key>Type</key>
+		<string>Group</string>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<string>example.com</string>
+		<key>Key</key>
+		<string>customEngine3DomainPart</string>
+		<key>Title</key>
+		<string>Domain Name</string>
+		<key>Type</key>
+		<string>TextField</string>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<string>q=*</string>
+		<key>Key</key>
+		<string>customEngine3QueryPart</string>
+		<key>Title</key>
+		<string>Query Fragment</string>
+		<key>Type</key>
+		<string>TextField</string>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<string>http://example.com/search?q=*</string>
+		<key>Key</key>
+		<string>customEngine3RedirectURL</string>
+		<key>Title</key>
+		<string>Redirect URL</string>
+		<key>Type</key>
+		<string>TextField</string>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>Custom Search Engine 4</string>
+		<key>Type</key>
+		<string>Group</string>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<string>example.com</string>
+		<key>Key</key>
+		<string>customEngine4DomainPart</string>
+		<key>Title</key>
+		<string>Domain Name</string>
+		<key>Type</key>
+		<string>TextField</string>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<string>q=*</string>
+		<key>Key</key>
+		<string>customEngine4QueryPart</string>
+		<key>Title</key>
+		<string>Query Fragment</string>
+		<key>Type</key>
+		<string>TextField</string>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<string>http://example.com/search?q=*</string>
+		<key>Key</key>
+		<string>customEngine4RedirectURL</string>
+		<key>Title</key>
+		<string>Redirect URL</string>
+		<key>Type</key>
+		<string>TextField</string>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>Custom Search Engine 5</string>
+		<key>Type</key>
+		<string>Group</string>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<string>example.com</string>
+		<key>Key</key>
+		<string>customEngine5DomainPart</string>
+		<key>Title</key>
+		<string>Domain Name</string>
+		<key>Type</key>
+		<string>TextField</string>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<string>q=*</string>
+		<key>Key</key>
+		<string>customEngine5QueryPart</string>
+		<key>Title</key>
+		<string>Query Fragment</string>
+		<key>Type</key>
+		<string>TextField</string>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<string>http://example.com/search?q=*</string>
+		<key>Key</key>
+		<string>customEngine5RedirectURL</string>
+		<key>Title</key>
+		<string>Redirect URL</string>
+		<key>Type</key>
+		<string>TextField</string>
 	</dict>
 </array>
 </plist>

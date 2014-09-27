@@ -43,6 +43,38 @@
 						<key>Title</key>
 						<string>Yahoo</string>
 					</dict>
+					<dict>
+						<key>Command</key>
+						<string>goEngine</string>
+						<key>Identifier</key>
+						<string>6F87078F-1B51-4038-9305-4D8674713A5F</string>
+						<key>Title</key>
+						<string>Bing</string>
+					</dict>
+					<dict>
+						<key>Command</key>
+						<string>goEngine</string>
+						<key>Identifier</key>
+						<string>11A7CF8D-9908-4D9E-B38C-68DD7E118958</string>
+						<key>Title</key>
+						<string>DuckDuckGo</string>
+					</dict>
+					<dict>
+						<key>Command</key>
+						<string>goEngine</string>
+						<key>Identifier</key>
+						<string>44FA1270-D84E-4140-A46C-BAFD61E4792D</string>
+						<key>Title</key>
+						<string>Start Page</string>
+					</dict>
+					<dict>
+						<key>Command</key>
+						<string>goEngine</string>
+						<key>Identifier</key>
+						<string>C86BB4AB-5A33-482F-8F0E-88DC00A4E8C5</string>
+						<key>Title</key>
+						<string>Disconnect</string>
+					</dict>
 				</array>
 			</dict>
 		</array>
@@ -62,7 +94,7 @@
 			</dict>
 			<dict>
 				<key>Command</key>
-				<string>goEngine</string>
+				<string></string>
 				<key>Identifier</key>
 				<string>choose</string>
 				<key>Image</key>

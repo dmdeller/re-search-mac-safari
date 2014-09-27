@@ -1,7 +1,5 @@
 this.ReSearch.Determinator =
   goFavourite: (tab) ->
-    console.log "hi, #{tab.url}"
-    
     redirectURL = this.redirectURL(tab.url)
     if redirectURL?
       tab.url = redirectURL
@@ -25,7 +23,7 @@ this.ReSearch.Determinator =
     
     if engines.count == 0
       console.log "No engines"
-      return
+      return null
     
     urlComponents = purl(currentURL)
     currentURLHostPart = urlComponents.attr('host')
@@ -94,16 +92,16 @@ this.ReSearch.Determinator =
     
     if currentID == favouriteID
       if currentID == ReSearch.Config.Engine.ID.DuckDuckGo
-          console.log "Current search page and favourite are both DuckDuckGo; redirecting to Google instead"
-          
-          return ReSearch.Config.Engine.Google()
+        console.log "Current search page and favourite are both DuckDuckGo; redirecting to Google instead"
+        
+        return ReSearch.Config.Engine.Google()
       else
-          console.log "Current search page and favourite are the same; redirecting to DuckDuckGo instead"
-          
-          return ReSearch.Config.Engine.DuckDuckGo()
+        console.log "Current search page and favourite are the same; redirecting to DuckDuckGo instead"
+        
+        return ReSearch.Config.Engine.DuckDuckGo()
     else
       return ReSearch.Config.Engine.favourite()
-
+  
   # Given a search engine redirect URL pattern and a query, return a URL to redirect to
   engineQueryURL: (engineRedirectURL, query) ->
     encodedQuery = encodeURIComponent(query)
