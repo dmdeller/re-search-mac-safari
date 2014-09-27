@@ -45,25 +45,34 @@ this.ReSearch.Determinator =
     
     engineQueryPartParts = engineQueryPart.split(ReSearch.queryToken)
     engineQueryFirstPart = _.first(engineQueryPartParts)
-    engineQueryLastPart = _.last(engineQueryPartParts);
+    engineQueryLastPart = _.last(engineQueryPartParts)
+    
+    if engineQueryLastPart == engineQueryFirstPart or !engineQueryLastPart?
+      engineQueryLastPart = ''
     
     unless _.str.include(pagePathPart, engineQueryFirstPart)
       console.log "domain matched, but current URL: #{pagePathPart} doesn't contain first part of queryPart: #{engineQueryFirstPart}"
       return
         
-    if engineQueryLastPart.length > 0 and !_.str.include(pagePathPar, engineQueryLastPart)
+    if engineQueryLastPart.length > 0 and !_.str.include(pagePathPart, engineQueryLastPart)
       console.log "domain matched, but current URL: #{pagePathPart} doesn't contain last part of queryPart: #{engineQueryLastPart}"
       return
     
-    regex = engineQueryPart.replace(ReSearch.queryToken, "(.+?)") + "/i"
-    matches = pagePathPart.match(regex)
+    encodedQuery = pagePathPart
     
-    if matches.length == 0
-      console.log "domain matches, but current URL: #{pagePathPart} doesn't match regular expression: #{regex}"
-      return
+    # Remove part before token
+    encodedQuery = _.strRight(encodedQuery, engineQueryFirstPart)
     
-    encodedQuery = _.first(matches)
-    decodedQuery = decodeURIComponent(encodedQuery)
+    # Remove part after token (if any)
+    if engineQueryLastPart.length > 0
+      encodedQuery = _.strLeft(encodedQuery, engineQueryLastPart)
+    
+    # Remove all text after any of these
+    for stopSymbol in ['&', '/', '?']
+      encodedQuery = _.strLeft(encodedQuery, stopSymbol)
+    
+    decodedQuery = encodedQuery
+    decodedQuery = decodedQuery.replace(/\+/g, ' ')
+    decodedQuery = decodeURIComponent(decodedQuery)
     
     return decodedQuery
-

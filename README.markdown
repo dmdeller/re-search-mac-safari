@@ -12,7 +12,12 @@ Setup
     npm install --global gulp
     npm install
 
-Build
------
+Build once
+----------
 
     gulp
+
+Build continuously
+------------------
+
+    gulp watch
