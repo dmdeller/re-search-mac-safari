@@ -1,6 +1,6 @@
 Handler =
   command: (event) ->
-    #console.log "Command handler for command: #{event.command}"
+    console.log "Command handler for command: #{event.command}" if ReSearch.debug
     
     if event.command == 'goFavourite'
       ReSearch.Determinator.goFavourite(event.target.browserWindow.activeTab)
@@ -9,7 +9,7 @@ Handler =
       ReSearch.Determinator.goEngine(safari.application.activeBrowserWindow.activeTab, event.target.identifier)
   
   validate: (event) ->
-    #console.log "Validate handler for command: #{event.command}"
+    console.log "Validate handler for command: #{event.command}" if ReSearch.debug
     
     currentURL = try event.target.browserWindow.activeTab.url catch then null
     

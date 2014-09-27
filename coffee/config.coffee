@@ -1,11 +1,28 @@
 this.ReSearch.Config =
-  _engines: []
+  _defaultEngines: []
   
   setDefaultEngines: (engines) ->
-    this._engines = engines
+    this._defaultEngines = engines
     
   engines: ->
-    this._engines
+    engines = this._defaultEngines
+    
+    # Add custom engines from settings
+    for index in [1..5]
+      engine =
+        id: "customEngine#{index}"
+        domainPart: safari.extension.settings["customEngine#{index}DomainPart"]
+        queryPart: safari.extension.settings["customEngine#{index}QueryPart"]
+        redirectURL: safari.extension.settings["customEngine#{index}RedirectURL"]
+      
+      continue if engine.domainPart == 'example.com'
+      
+      redirectURLComponents = purl(engine.redirectURL)
+      continue if _.endsWith(redirectURLComponents.attr('host'), 'example.com')
+      
+      engines.push(engine)
+    
+    return engines
   
   engineForID: (id) ->
     for engine in this.engines()
