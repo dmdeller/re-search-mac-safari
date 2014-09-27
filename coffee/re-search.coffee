@@ -1,3 +1,3 @@
 this.ReSearch =
   queryToken: "*"
-  debug: true
+  debug: false

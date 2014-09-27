@@ -17,6 +17,12 @@ Handler =
       event.target.disabled = !ReSearch.Determinator.isSearchPage(currentURL) or ReSearch.Determinator.isFavouriteEngine(currentURL)
     else if event.command == 'choose'
       event.target.disabled = !ReSearch.Determinator.isSearchPage(currentURL)
+    else if event.command == 'goEngine'
+      currentURL = safari.application.activeBrowserWindow.activeTab.url
+      engine = ReSearch.Config.engineForID(event.target.identifier)
+      
+      # Workaround: see above
+      event.target.disabled = ReSearch.Determinator.isPageBelongingToEngine(currentURL, engine)
 
 safari.application.addEventListener("command", Handler.command, false)
 safari.application.addEventListener("validate", Handler.validate, false)
