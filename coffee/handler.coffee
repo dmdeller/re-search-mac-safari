@@ -23,6 +23,26 @@ Handler =
       
       # Workaround: see above
       event.target.disabled = !engine? or ReSearch.Determinator.isPageBelongingToEngine(currentURL, engine)
+  
+  message: (event) ->
+    if event.name == 'keyShortcut'
+      console.log "Global page got key shortcut"
+      ReSearch.Determinator.goFavourite(safari.application.activeBrowserWindow.activeTab)
+    else if event.name == 'getKeyShortcutSetting'
+      bindKey = safari.extension.settings.shortcut
+      event.target.browserWindow.activeTab.page.dispatchMessage('bindKey', bindKey)
+  
+  setting: (event) ->
+    if event.key == 'shortcut'
+      bindKey = event.newValue
+      console.log "Shortcut setting changed to: #{bindKey}"
+      
+      for window in safari.application.browserWindows
+        for tab in window.tabs
+          tab.page.dispatchMessage('bindKey', bindKey)
 
 safari.application.addEventListener("command", Handler.command, false)
 safari.application.addEventListener("validate", Handler.validate, false)
+safari.application.addEventListener("message", Handler.message, false)
+
+safari.extension.settings.addEventListener("change", Handler.setting, false)

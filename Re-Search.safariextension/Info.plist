@@ -151,7 +151,13 @@
 	<key>Content</key>
 	<dict>
 		<key>Scripts</key>
-		<dict/>
+		<dict>
+			<key>Start</key>
+			<array>
+				<string>vendor/js/mousetrap/mousetrap.js</string>
+				<string>js/injected.js</string>
+			</array>
+		</dict>
 	</dict>
 	<key>Description</key>
 	<string>Repeat your search with a different search engine</string>

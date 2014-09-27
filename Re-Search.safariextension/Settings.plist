@@ -50,16 +50,18 @@
 		<key>Titles</key>
 		<array>
 			<string>None</string>
+			<string>Command-Option-R</string>
 			<string>Option-R</string>
-			<string>Shift-Option-R</string>
+			<string>Option-Shift-R</string>
 		</array>
 		<key>Type</key>
 		<string>PopUpButton</string>
 		<key>Values</key>
 		<array>
 			<string>none</string>
-			<string>opt-r</string>
-			<string>shift-opt-r</string>
+			<string>command+option+r</string>
+			<string>option+r</string>
+			<string>option+shift+r</string>
 		</array>
 	</dict>
 	<dict>
