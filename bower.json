@@ -12,6 +12,7 @@
     "tests"
   ],
   "dependencies": {
-    "purl": "~2.3.1"
+    "purl": "~2.3.1",
+    "underscore.string": "~2.3.3"
   }
 }
