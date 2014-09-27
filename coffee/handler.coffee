@@ -5,7 +5,8 @@ Handler =
     if event.command == 'goFavourite'
       ReSearch.Determinator.goFavourite(event.target.browserWindow.activeTab)
     else if event.command == 'goEngine'
-      console.log 'go engine'
+      # Workaround: event.target.browserWindow is null - not sure why - so we have to get it from safari.application instead
+      ReSearch.Determinator.goEngine(safari.application.activeBrowserWindow.activeTab, event.target.identifier)
   
   validate: (event) ->
     #console.log "Validate handler for command: #{event.command}"

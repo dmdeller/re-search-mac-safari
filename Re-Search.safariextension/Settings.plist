@@ -4,33 +4,11 @@
 <array>
 	<dict>
 		<key>DefaultValue</key>
-		<string>none</string>
-		<key>Key</key>
-		<string>shortcut</string>
-		<key>Title</key>
-		<string>Keyboard Shortcut</string>
-		<key>Titles</key>
-		<array>
-			<string>None</string>
-			<string>Option-R</string>
-			<string>Shift-Option-R</string>
-		</array>
-		<key>Type</key>
-		<string>PopUpButton</string>
-		<key>Values</key>
-		<array>
-			<string>none</string>
-			<string>opt-r</string>
-			<string>shift-opt-r</string>
-		</array>
-	</dict>
-	<dict>
-		<key>DefaultValue</key>
 		<string>6F87078F-1B51-4038-9305-4D8674713A5F</string>
 		<key>Key</key>
 		<string>favouriteEngine</string>
 		<key>Title</key>
-		<string>Favourite Search Engine</string>
+		<string>Search Engine</string>
 		<key>Titles</key>
 		<array>
 			<string>Google</string>
@@ -50,6 +28,28 @@
 			<string>11A7CF8D-9908-4D9E-B38C-68DD7E118958</string>
 			<string>44FA1270-D84E-4140-A46C-BAFD61E4792D</string>
 			<string>C86BB4AB-5A33-482F-8F0E-88DC00A4E8C5</string>
+		</array>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<string>none</string>
+		<key>Key</key>
+		<string>shortcut</string>
+		<key>Title</key>
+		<string>Keyboard Shortcut</string>
+		<key>Titles</key>
+		<array>
+			<string>None</string>
+			<string>Option-R</string>
+			<string>Shift-Option-R</string>
+		</array>
+		<key>Type</key>
+		<string>PopUpButton</string>
+		<key>Values</key>
+		<array>
+			<string>none</string>
+			<string>opt-r</string>
+			<string>shift-opt-r</string>
 		</array>
 	</dict>
 	<dict>

@@ -6,19 +6,35 @@ this.ReSearch.Determinator =
     else
       alert 'Sorry, this page is not supported by Re-Search.'
   
+  goEngine: (tab, engineID) ->
+    engine = ReSearch.Config.engineForID(engineID)
+    
+    if this.isPageBelongingToEngine(tab.url, engine)
+      alert 'You are already looking at this search engine.'
+      return
+    
+    redirectURL = this.redirectURL(tab.url, engine)
+    if redirectURL?
+      tab.url = redirectURL
+    else
+      alert 'Sorry, this page is not supported by Re-Search.'
+  
   isSearchPage: (currentURL) ->
     this.redirectURL(currentURL)?
+  
+  isPageBelongingToEngine: (currentURL, engine) ->
+    urlComponents = purl(currentURL)
+    currentURLHostPart = urlComponents.attr('host')
+    
+    return _.endsWith(currentURLHostPart, engine.domainPart)
   
   isFavouriteEngine: (currentURL) ->
     favouriteEngine = ReSearch.Config.Engine.favourite()
     
-    urlComponents = purl(currentURL)
-    currentURLHostPart = urlComponents.attr('host')
-    
-    return _.endsWith(currentURLHostPart, favouriteEngine.domainPart)
+    return this.isPageBelongingToEngine(currentURL, favouriteEngine)
   
   # Given a current search URL, find and return an equivalent search URL with a different search engine
-  redirectURL: (currentURL) ->
+  redirectURL: (currentURL, selectedEngine) ->
     engines = ReSearch.Config.engines()
     
     if engines.count == 0
@@ -36,7 +52,10 @@ this.ReSearch.Determinator =
       pageQuery = this.queryString(engine.queryPart, currentURLPathPart)
       continue unless pageQuery? and pageQuery.length > 0
       
-      redirectEngine = this.redirectEngine(engine.id)
+      if selectedEngine?
+        redirectEngine = selectedEngine
+      else
+        redirectEngine = this.redirectEngine(engine.id)
       continue unless redirectEngine?
       
       redirectURL = this.engineQueryURL(redirectEngine.redirectURL, pageQuery)
