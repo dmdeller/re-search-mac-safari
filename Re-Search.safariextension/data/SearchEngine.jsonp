@@ -42,7 +42,7 @@ ReSearch.Config.setDefaultEngines(
         "order": 4,
         "domainPart": "startpage.com",
         "queryPart": "query=*",
-        "redirectURL": "https://startpage.com/do/m/mobilesearch?query=*",
+        "redirectURL": "https://startpage.com/do/search?query=*",
         "mutable": false
     },
     {
