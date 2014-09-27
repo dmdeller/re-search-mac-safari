@@ -1,0 +1,17 @@
+{
+  "name": "Re-Search",
+  "version": "0.0.0",
+  "authors": [
+    "David Deller <david@horizon-nigh.org>"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "purl": "~2.3.1"
+  }
+}
