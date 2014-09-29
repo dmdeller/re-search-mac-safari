@@ -51,8 +51,10 @@
 		<array>
 			<string>None</string>
 			<string>Command-Option-R</string>
-			<string>Option-R</string>
-			<string>Option-Shift-R</string>
+			<string>Control-R</string>
+			<string>Control-Shift-R</string>
+			<string>Control-G</string>
+			<string>Control-Shift-G</string>
 		</array>
 		<key>Type</key>
 		<string>PopUpButton</string>
@@ -60,8 +62,10 @@
 		<array>
 			<string>none</string>
 			<string>command+option+r</string>
-			<string>option+r</string>
-			<string>option+shift+r</string>
+			<string>control+r</string>
+			<string>control+shift+r</string>
+			<string>control+g</string>
+			<string>control+shift+g</string>
 		</array>
 	</dict>
 	<dict>
