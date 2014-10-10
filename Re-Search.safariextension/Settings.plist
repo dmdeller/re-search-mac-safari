@@ -62,10 +62,10 @@
 		<array>
 			<string>none</string>
 			<string>command+option+r</string>
-			<string>control+r</string>
-			<string>control+shift+r</string>
-			<string>control+g</string>
-			<string>control+shift+g</string>
+			<string>ctrl+r</string>
+			<string>ctrl+shift+r</string>
+			<string>ctrl+g</string>
+			<string>ctrl+shift+g</string>
 		</array>
 	</dict>
 	<dict>
