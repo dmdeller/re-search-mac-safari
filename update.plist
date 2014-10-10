@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+   <key>Extension Updates</key>
+   <array>
+     <dict>
+       <key>CFBundleIdentifier</key>
+       <string>org.horizon-nigh.re-search.safari</string>
+       <key>Developer Identifier</key>
+       <string>2ZS98V3L3J</string>
+       <key>CFBundleVersion</key>
+       <string>3</string>
+       <key>CFBundleShortVersionString</key>
+       <string>1.0</string>
+       <key>URL</key>
+       <string>https://s3.amazonaws.com/horizon-nigh.org/re-search/Re-Search.safariextz</string>
+     </dict>
+   </array>
+</dict>
+</plist>
