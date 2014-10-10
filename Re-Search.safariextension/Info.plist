@@ -126,7 +126,7 @@
 				<key>Identifier</key>
 				<string>favourite</string>
 				<key>Image</key>
-				<string>images/toolbar-icon.png</string>
+				<string>images/toolbar icon cropped.png</string>
 				<key>Label</key>
 				<string>Re-Search: Favourite</string>
 				<key>Menu</key>
@@ -138,7 +138,7 @@
 				<key>Identifier</key>
 				<string>choose</string>
 				<key>Image</key>
-				<string>images/toolbar-icon.png</string>
+				<string>images/toolbar icon cropped.png</string>
 				<key>Include By Default</key>
 				<true/>
 				<key>Label</key>
